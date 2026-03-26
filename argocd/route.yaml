@@ -1,0 +1,19 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  # ✏️ Replace YOUR_NAME with your name (lowercase, no spaces)
+  name: nginx-lab-YOUR_NAME
+  # ✏️ Replace YOUR_STUDENT_ID with your student ID, e.g. student-12
+  namespace: bac-lab-YOUR_STUDENT_ID
+  labels:
+    app: nginx-lab
+    trainee: YOUR_NAME
+spec:
+  to:
+    kind: Service
+    name: nginx-lab-YOUR_NAME
+  port:
+    targetPort: http
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect

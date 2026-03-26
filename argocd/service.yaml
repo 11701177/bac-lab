@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  # ✏️ Replace YOUR_NAME with your name (lowercase, no spaces)
+  name: nginx-lab-YOUR_NAME
+  # ✏️ Replace YOUR_STUDENT_ID with your student ID, e.g. student-12
+  namespace: bac-lab-YOUR_STUDENT_ID
+  labels:
+    app: nginx-lab
+    trainee: YOUR_NAME
+spec:
+  selector:
+    app: nginx-lab
+    trainee: YOUR_NAME
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: ClusterIP

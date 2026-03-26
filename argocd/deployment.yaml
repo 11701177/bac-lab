@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  # ✏️ Replace YOUR_NAME with your name (lowercase, no spaces)
+  name: nginx-lab-YOUR_NAME
+  # ✏️ Replace YOUR_STUDENT_ID with your student ID, e.g. student-12
+  namespace: bac-lab-YOUR_STUDENT_ID
+  labels:
+    app: nginx-lab
+    trainee: YOUR_NAME
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-lab
+      trainee: YOUR_NAME
+  template:
+    metadata:
+      labels:
+        app: nginx-lab
+        trainee: YOUR_NAME
+    spec:
+      containers:
+        - name: nginx
+          # ✏️ Replace with your image tag, e.g. docker.io/benhari/nginx-lab:student-12-v1
+          image: docker.io/benhari/nginx-lab:student-00-v1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 30
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "32Mi"
+            limits:
+              cpu: "100m"
+              memory: "64Mi"
+          securityContext:
+            allowPrivilegeEscalation: false
+            runAsNonRoot: true
+            capabilities:
+              drop: ["ALL"]

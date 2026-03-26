@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CI/CD Lab</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 40px 48px;
+      max-width: 520px;
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      background: #0ea5e9;
+      color: #0f172a;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 20px;
+    }
+    h1 { font-size: 28px; font-weight: 700; margin-bottom: 12px; }
+    p  { color: #94a3b8; line-height: 1.6; margin-bottom: 24px; }
+    .meta { font-size: 13px; color: #475569; border-top: 1px solid #334155; padding-top: 20px; }
+    .meta span { color: #64748b; }
+    .highlight { color: #38bdf8; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge">CI/CD Lab</div>
+
+    <!-- ✏️ Replace YOUR_NAME with your name -->
+    <h1>Hello from <span class="highlight">YOUR_NAME</span>!</h1>
+
+    <p>
+      This page is served by my custom Nginx container, built with GitHub Actions
+      and deployed on OpenShift via ArgoCD.
+    </p>
+
+    <!-- ✏️ Replace the values below -->
+    <div class="meta">
+      Student: <span>YOUR_STUDENT_ID</span> &nbsp;·&nbsp;
+      Version: <span>v1</span>
+    </div>
+  </div>
+</body>
+</html>
