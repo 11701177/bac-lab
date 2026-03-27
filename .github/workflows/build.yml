@@ -14,7 +14,7 @@ env:
 
   # ✏️ TRAINEES: Set these two values before pushing
   STUDENT_ID: "student-6"   # e.g. student-12
-  VERSION: "v1"              # bump this every time you push a new image
+  VERSION: "v2"              # bump this every time you push a new image
 
 jobs:
   build-and-push:   
