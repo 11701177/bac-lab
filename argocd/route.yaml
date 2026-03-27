@@ -4,7 +4,7 @@ metadata:
   # ✏️ Replace YOUR_NAME with your name (lowercase, no spaces)
   name: nginx-lab-tommie
   # ✏️ Replace YOUR_STUDENT_ID with your student ID, e.g. student-12
-  namespace: bac-lab-6
+  namespace: bac-lab-student-6
   labels:
     app: nginx-lab
     trainee: tommie
