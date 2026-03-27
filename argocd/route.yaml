@@ -2,16 +2,16 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   # ✏️ Replace YOUR_NAME with your name (lowercase, no spaces)
-  name: nginx-lab-YOUR_NAME
+  name: nginx-lab-tommie
   # ✏️ Replace YOUR_STUDENT_ID with your student ID, e.g. student-12
-  namespace: bac-lab-YOUR_STUDENT_ID
+  namespace: bac-lab-6
   labels:
     app: nginx-lab
-    trainee: YOUR_NAME
+    trainee: tommie
 spec:
   to:
     kind: Service
-    name: nginx-lab-YOUR_NAME
+    name: nginx-lab-tommie
   port:
     targetPort: http
   tls:
