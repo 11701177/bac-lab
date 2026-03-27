@@ -4,7 +4,7 @@ metadata:
   # ✏️ Replace YOUR_NAME with your name (lowercase, no spaces)
   name: nginx-lab-tommie
   # ✏️ Replace YOUR_STUDENT_ID with your student ID, e.g. student-12
-  namespace: bac-lab-6
+  namespace: bac-lab-student-6
   labels:
     app: nginx-lab
     trainee: tommie
@@ -23,7 +23,7 @@ spec:
       containers:
         - name: nginx
           # ✏️ Replace with your image tag, e.g. docker.io/benhari/nginx-lab:student-12-v1
-          image: docker.io/benhari/nginx-lab:student-06-v1
+          image: docker.io/benhari/nginx-lab:student-6-v1
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
