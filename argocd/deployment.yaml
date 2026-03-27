@@ -23,7 +23,7 @@ spec:
       containers:
         - name: nginx
           # ✏️ Replace with your image tag, e.g. docker.io/benhari/nginx-lab:student-12-v1
-          image: docker.io/benhari/nginx-lab:student-6-v1
+          image: docker.io/benhari/nginx-lab:student-6-v2
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
