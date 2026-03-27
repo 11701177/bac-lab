@@ -13,7 +13,7 @@ env:
   REPOSITORY: benhari/nginx-lab
 
   # ✏️ TRAINEES: Set these two values before pushing
-  STUDENT_ID: "student-00"   # e.g. student-12
+  STUDENT_ID: "student-6"   # e.g. student-12
   VERSION: "v1"              # bump this every time you push a new image
 
 jobs:
