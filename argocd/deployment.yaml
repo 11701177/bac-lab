@@ -2,28 +2,28 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   # ✏️ Replace YOUR_NAME with your name (lowercase, no spaces)
-  name: nginx-lab-YOUR_NAME
+  name: nginx-lab-tommie
   # ✏️ Replace YOUR_STUDENT_ID with your student ID, e.g. student-12
-  namespace: bac-lab-YOUR_STUDENT_ID
+  namespace: bac-lab-6
   labels:
     app: nginx-lab
-    trainee: YOUR_NAME
+    trainee: tommie
 spec:
   replicas: 1
   selector:
     matchLabels:
       app: nginx-lab
-      trainee: YOUR_NAME
+      trainee: tommie
   template:
     metadata:
       labels:
         app: nginx-lab
-        trainee: YOUR_NAME
+        trainee: tommie
     spec:
       containers:
         - name: nginx
           # ✏️ Replace with your image tag, e.g. docker.io/benhari/nginx-lab:student-12-v1
-          image: docker.io/benhari/nginx-lab:student-00-v1
+          image: docker.io/benhari/nginx-lab:student-06-v1
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
